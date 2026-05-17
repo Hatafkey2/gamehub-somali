@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+    background: #0f172a;
+}
+
+/* PAGE BACKGROUNDS */
+.home-page {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./images/background 1.jpeg");
+}
+
+.market-page {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./images/messi5.jpg");
+}
+
+.sell-page {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./images/kaka2.jpg");
+}
+
+.contact-page {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./images/cr9.jpg");
+}
+
+.home-page,
+.market-page,
+.sell-page,
+.contact-page {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HIDE SCROLLBAR BUT KEEP SCROLLING */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    scrollbar-width: none;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(2, 6, 23, 0.75);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #020617;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    border: 2px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #38bdf8;
+}
+
+.btn-secondary:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* HOME */
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.featured,
+.feature {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.featured h2,
+.feature h2 {
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.card-container,
+.card-containers {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+/* MARKET */
+.market {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.market h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.market p {
+    margin-bottom: 20px;
+}
+
+.market-container,
+.market-containers {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.market-card {
+    background: rgba(15, 23, 42, 0.92);
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.market-card:hover {
+    transform: translateY(-8px);
+}
+
+.market-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: #020617;
+    border-radius: 10px;
+    display: block;
+}
+
+.market-card h2 {
+    margin: 15px 0;
+    color: #38bdf8;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #facc15;
+    font-weight: bold;
+}
+
+/* SELL */
+.sell-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.sell-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.sell-section p {
+    margin-bottom: 30px;
+}
+
+.sell-form {
+    background: rgba(15, 23, 42, 0.92);
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell-form input,
+.sell-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.sell-form input[type="file"] {
+    background: white;
+    color: #020617;
+}
+
+.sell-form button {
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* CONTACT */
+.contact-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-form,
+.contact-info {
+    background: rgba(15, 23, 42, 0.92);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+
+.socials {
+    margin-top: 25px;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .hero h1,
+    .market h1,
+    .sell-section h1,
+    .contact-section h1 {
+        font-size: 2.4rem;
+    }
+
+    .market-card,
+    .card {
+        width: 45%;
+    }
+}
+
+/* PHONES */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1,
+    .market h1,
+    .sell-section h1,
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .market-container,
+    .market-containers,
+    .card-container,
+    .card-containers,
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .market-card,
+    .card,
+    .contact-form,
+    .contact-info,
+    .sell-form {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .market-card img {
+        height: 170px;
+    }
+}
+.
